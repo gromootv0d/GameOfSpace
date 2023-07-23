@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GameServer.Abstract;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace GameServer;
 
-public class Ship
+public class Ship : IMovable
 {
     public int X { get; set; } // Координата X корабля
     public int Y { get; set; } // Координата Y корабля
@@ -24,5 +25,46 @@ public class Ship
         X = x;
         Y = y;
         FacingDirection = direction;
+    }
+    private bool IsWithinBounds(int targetX, int targetY)
+    {
+        return targetX >= 0 && targetX < 6 && targetY >= 0 && targetY < 6;
+    }
+
+    public void Move(Direction direction)
+    {
+        // Получаем текущие координаты корабля
+        int currentX = X;
+        int currentY = Y;
+
+        // Вычисляем новые координаты в зависимости от направления
+        int newX = currentX;
+        int newY = currentY;
+
+        switch (direction)
+        {
+            case Direction.Up:
+                newY--;
+                break;
+            case Direction.Down:
+                newY++;
+                break;
+            case Direction.Left:
+                newX--;
+                break;
+            case Direction.Right:
+                newX++;
+                break;
+            default:
+                break;
+        }
+
+        // Проверяем, находится ли новая позиция в пределах игрового поля
+        if (IsWithinBounds(newX, newY))
+        {
+            // Перемещаем корабль в новую позицию
+            X = newX;
+            Y = newY;
+        }
     }
 }

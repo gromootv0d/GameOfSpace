@@ -401,39 +401,11 @@ public class Game
 
     public void MoveShip(Ship ship, Direction direction)
     {
-        // Получаем текущие координаты корабля
-        int currentX = ship.X;
-        int currentY = ship.Y;
+        // Создаем экземпляр класса ShipMovement
+        ShipMovement shipMovement = new ShipMovement();
 
-        // Вычисляем новые координаты в зависимости от направления
-        int newX = currentX;
-        int newY = currentY;
-
-        switch (direction)
-        {
-            case Direction.Up:
-                newY--;
-                break;
-            case Direction.Down:
-                newY++;
-                break;
-            case Direction.Left:
-                newX--;
-                break;
-            case Direction.Right:
-                newX++;
-                break;
-            default:
-                break;
-        }
-
-        // Проверяем, находится ли новая позиция в пределах игрового поля
-        if (IsWithinBounds(newX, newY))
-        {
-            // Перемещаем корабль в новую позицию
-            ship.X = newX;
-            ship.Y = newY;
-        }
+        // Вызываем метод MoveShip() из класса ShipMovement
+        shipMovement.MoveShip(ship, direction, IsWithinBounds);
     }
 
     public void FireTorpedo(Ship ship, Ship targetShip)
