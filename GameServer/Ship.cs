@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace GameServer;
 
-public class Ship : IMovable
+public class Ship : IMovable, IRotatable
 {
     public int X { get; set; } // Координата X корабля
     public int Y { get; set; } // Координата Y корабля
@@ -30,6 +30,21 @@ public class Ship : IMovable
     {
         return targetX >= 0 && targetX < 6 && targetY >= 0 && targetY < 6;
     }
+    public void Rotate(RotationDirection rotationDirection)
+    {
+        switch (rotationDirection)
+        {
+            case RotationDirection.Counterclockwise:
+                // Логика поворота корабля против часовой стрелки
+                break;
+            case RotationDirection.Clockwise:
+                // Логика поворота корабля по часовой стрелке
+                break;
+            default:
+                break;
+        }
+    }
+
 
     public void Move(Direction direction)
     {
