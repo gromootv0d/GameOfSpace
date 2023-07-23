@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using GameServer.ShipChange;
 
 namespace GameServer;
 
@@ -274,11 +275,11 @@ public class Game
                 break;
             case 1:
                 // Поворот против часовой стрелки
-                newDirection = GetCounterclockwiseDirection(currentDirection);
+                newDirection = ShipRotator.GetCounterclockwiseDirection(currentDirection);
                 break;
             case 2:
                 // Поворот по часовой стрелке
-                newDirection = GetClockwiseDirection(currentDirection);
+                newDirection = ShipRotator.GetClockwiseDirection(currentDirection);
                 break;
             default:
                 newDirection = currentDirection;
@@ -286,40 +287,6 @@ public class Game
         }
 
         return newDirection;
-    }
-
-    private Direction GetCounterclockwiseDirection(Direction currentDirection)
-    {
-        switch (currentDirection)
-        {
-            case Direction.Up:
-                return Direction.Left;
-            case Direction.Down:
-                return Direction.Right;
-            case Direction.Left:
-                return Direction.Down;
-            case Direction.Right:
-                return Direction.Up;
-            default:
-                return currentDirection;
-        }
-    }
-
-    private Direction GetClockwiseDirection(Direction currentDirection)
-    {
-        switch (currentDirection)
-        {
-            case Direction.Up:
-                return Direction.Right;
-            case Direction.Down:
-                return Direction.Left;
-            case Direction.Left:
-                return Direction.Up;
-            case Direction.Right:
-                return Direction.Down;
-            default:
-                return currentDirection;
-        }
     }
 
     private Ship GetPlayerTargetShip(Ship playerShip)

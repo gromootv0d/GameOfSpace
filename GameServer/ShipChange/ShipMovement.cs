@@ -1,4 +1,4 @@
-﻿namespace GameServer
+﻿namespace GameServer.ShipChange
 {
     public class ShipMovement
     {
