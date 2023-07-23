@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33717.318
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameOfSpace", "GameOfSpace\GameOfSpace.csproj", "{349AB1D7-4048-4565-90B8-3AE0FB5294DD}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameServer", "GameServer\GameServer.csproj", "{51D79879-95D1-4B06-97AE-AF86A48F883C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayerConsoleApp", "PlayerConsoleApp\PlayerConsoleApp.csproj", "{605CB1FC-3F01-4E00-AAFE-332CF49B2F4D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgentApp", "AgentApp\AgentApp.csproj", "{4F5B6EDB-9082-482F-8556-EB559FD8212C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,14 +15,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{349AB1D7-4048-4565-90B8-3AE0FB5294DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{349AB1D7-4048-4565-90B8-3AE0FB5294DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{349AB1D7-4048-4565-90B8-3AE0FB5294DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{349AB1D7-4048-4565-90B8-3AE0FB5294DD}.Release|Any CPU.Build.0 = Release|Any CPU
 		{51D79879-95D1-4B06-97AE-AF86A48F883C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{51D79879-95D1-4B06-97AE-AF86A48F883C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{51D79879-95D1-4B06-97AE-AF86A48F883C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{51D79879-95D1-4B06-97AE-AF86A48F883C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{605CB1FC-3F01-4E00-AAFE-332CF49B2F4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{605CB1FC-3F01-4E00-AAFE-332CF49B2F4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{605CB1FC-3F01-4E00-AAFE-332CF49B2F4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{605CB1FC-3F01-4E00-AAFE-332CF49B2F4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F5B6EDB-9082-482F-8556-EB559FD8212C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F5B6EDB-9082-482F-8556-EB559FD8212C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F5B6EDB-9082-482F-8556-EB559FD8212C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F5B6EDB-9082-482F-8556-EB559FD8212C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

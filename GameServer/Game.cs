@@ -391,7 +391,7 @@ public class Game
     }
 
 
-    private void CheckForWinner()
+    public void CheckForWinner()
     {
         if (playerFleet.Count == 0 || enemyFleet.Count == 0)
         {
